@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<movies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://sample"
+        xsi:schemaLocation="http://sample movie.xsd">
+	<movie title="Inception">
+    	<year>2010</year>
+    	<genre>Action</genre>
+    	<actor name="Leonardo DiCaprio">
+    		<dateofbirth>1974-11-11</dateofbirth>
+    	</actor>
+	</movie>
+	<movie title="The Royal Tenenbaums">
+		<year>2001</year>
+		<genre>Comedy</genre>
+		<actor name="Gene Hackman">
+			<dateofbirth>1930-01-30</dateofbirth>
+		</actor>
+		<actor name="Gwyneth Paltrow">
+			<dateofbirth>1972-09-27</dateofbirth>
+		</actor>
+	</movie>
+</movies>
