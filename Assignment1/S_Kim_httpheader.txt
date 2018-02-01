@@ -1,65 +1,47 @@
-{\rtf1\ansi\ansicpg949\cocoartf1561\cocoasubrtf100
-{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red246\green246\blue246;\red29\green0\blue255;
-\red38\green38\blue38;\red63\green63\blue63;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c97255\c97255\c97255;\cssrgb\c16471\c0\c100000;
-\cssrgb\c20000\c20000\c20000;\cssrgb\c31373\c31373\c31373;}
-{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
-\margl1440\margr1440\vieww10800\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+REQUEST HEADERS:
+	cache-control: “no-cache”
+		specifies caching mechanisms
+	postman-token: “fcf2c3da-dd9c-453e-ad33-2f435b0e4c6d"
+		for bypassing a bug in Chrome
+	user-agent: “PostmanRuntime/7.1.1”
+		gives information about the software requesting the call
+	accept: “*/*”
+		specifies the MIME type that the client can accept (all types)
+	host: “www.googleapis.com”
+		specifies domain name of server
+	accept-encoding: “gzip, deflate”
+		specifies which content encoding the client can understand
 
-\f0\fs24 \cf2 REQUEST HEADERS:\
-	cache-control: \'93no-cache\'94\
-		specifies caching mechanisms\
-	postman-token: \'93\cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec4 fcf2c3da-dd9c-453e-ad33-2f435b0e4c6d"\cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
-		for bypassing a bug in Chrome\
-	user-agent: \'93PostmanRuntime/7.1.1\'94\
-		gives information about the software requesting the call\
-	accept: \'93*/*\'94\
-		specifies the MIME type that the client can accept (all types)\
-	host: \'93www.googleapis.com\'94\
-		specifies domain name of server\
-	accept-encoding: \'93gzip, deflate\'94\
-		specifies which content encoding the client can understand\
-\
-RESPONSE HEADERS:\
-	expires: \'93Thu, 01 Feb 2018 00:23:34 GMT\'94\
-		time when response is considered stale\
-	date: \'93Thu, 01 Feb 2018 00:23:34 GMT\'94\
-		when the request was made\
-	cache-control: \'93private, max-age=0, must-revalidate, no-transform\'94\
-		specifies caching mechanisms, \'93cacheability, expiration (in\
-		seconds), revalidation, other\'94\
-	etag: \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec4 ""f6QLsd8inUgRKJVNBqJ8xHnPb0w/EmhxK_sK5ZLrMggQLBw0LsXcXtY""\cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
-		identifier for a specific resource\
-	vary: 0: \'93Origin\'94 1: \'93X-Origin\'94\
-		determines if a cached response can be used with future\
-		responses\
-	content-type: \'93application/json; charset=UTF-8\'94\
-		gives the media type of the resource\
-	content-encoding: \'93gzip\'94\
-		used to compress media type\
-	\cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec5 x-content-type-options:\strokec4 "nosniff"\
-		indicates MIME types in content-type should not be changed\
-		and followed\cb1 \strokec6 \
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\partightenfactor0
-\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec5 x-frame-options:\strokec4 "SAMEORIGIN"\
-\pard\tx720\tx1440\pardeftab720\sl360\partightenfactor0
-\cf2 \cb1 \strokec6 		specifies if browser is allowed to render a page\
-	\cb3 \strokec5 x-xss-protection:\strokec4 "1; mode=block"\
-		feature of browsers, stops page loading when xss attack is\
-		detected\cb1 \strokec6 \
-\pard\tx720\pardeftab720\sl360\partightenfactor0
-\cf2 \cb3 \strokec5 	server:\strokec4 "GSE"\
-		software used by origin server to handle request\cb1 \strokec6 \
-\cb3 \strokec5 	alt-svc:\strokec4 "hq=":443"; ma=2592000; quic=51303431; quic=51303339;\
-	quic=51303338; quic=51303337; quic=51303335,quic=":443"; \
-	ma=2592000; v="41,39,38,37,35""\
-		availability of alternate services to clients\cb1 \strokec6 \
-\cb3 \strokec5 	transfer-encoding:\strokec4 "chunked"\cb1 \strokec6 \
-		encoding used to transfer entity to user}
+RESPONSE HEADERS:
+	expires: “Thu, 01 Feb 2018 00:23:34 GMT”
+		time when response is considered stale
+	date: “Thu, 01 Feb 2018 00:23:34 GMT”
+		when the request was made
+	cache-control: “private, max-age=0, must-revalidate, no-transform”
+		specifies caching mechanisms, “cacheability, expiration (in
+		seconds), revalidation, other”
+	etag: ""f6QLsd8inUgRKJVNBqJ8xHnPb0w/EmhxK_sK5ZLrMggQLBw0LsXcXtY""
+		identifier for a specific resource
+	vary: 0: “Origin” 1: “X-Origin”
+		determines if a cached response can be used with future
+		responses
+	content-type: “application/json; charset=UTF-8”
+		gives the media type of the resource
+	content-encoding: “gzip”
+		used to compress media type
+	x-content-type-options:"nosniff"
+		indicates MIME types in content-type should not be changed
+		and followed
+		x-frame-options:"SAMEORIGIN"
+		specifies if browser is allowed to render a page
+	x-xss-protection:"1; mode=block"
+		feature of browsers, stops page loading when xss attack is
+		detected
+	server:"GSE"
+		software used by origin server to handle request
+	alt-svc:"hq=":443"; ma=2592000; quic=51303431; quic=51303339;
+	quic=51303338; quic=51303337; quic=51303335,quic=":443"; 
+	ma=2592000; v="41,39,38,37,35""
+		availability of alternate services to clients
+	transfer-encoding:"chunked"
+		encoding used to transfer entity to user
