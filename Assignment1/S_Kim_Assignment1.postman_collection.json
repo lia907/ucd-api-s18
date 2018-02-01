@@ -1,0 +1,123 @@
+{
+	"info": {
+		"name": "S_Kim_Assignment1",
+		"_postman_id": "f95d63e2-6d03-6752-ac46-916bf7118755",
+		"description": "Soo Kim\nCSCI 3916-001\nAssignment 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0d024be0-04b7-4211-afe6-c8b57bde23df",
+						"type": "text/javascript",
+						"exec": [
+							"pm.environment.set(\"book_title\", \"Turing\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6a1cfa05-66bb-4ce4-8afd-ad9949ca361c",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var title = jsonData.items[0].volumeInfo.title;",
+							"var id = jsonData.items[0].id;",
+							"postman.setEnvironmentVariable(\"id\", id);",
+							"console.log(\"title \" + title);",
+							"var patt = /turing/i;",
+							"var res = patt.test(title);",
+							"console.log(res);",
+							"",
+							"for (var i in jsonData.items){",
+							"    title = jsonData.items[i].volumeInfo.title;",
+							"    res = patt.test(title);",
+							"    tests[\"Book Title: \" + title] = (res === true);",
+							"}",
+							"pm.test(\"Status Code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://www.googleapis.com/books/v1/volumes?q={{book_title}};",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"books",
+						"v1",
+						"volumes"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "{{book_title}};",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Volume",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0e48ccd5-ed2e-4f94-99d4-b739a4fc20b1",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"ID From Request\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.eql(pm.environment.get(\"id\"));",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://www.googleapis.com/books/v1/volumes/{{id}}",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"books",
+						"v1",
+						"volumes",
+						"{{id}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
